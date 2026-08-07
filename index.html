@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   	<title>ICATO – Individual Condensation Trails in Aircraft Trajectory Optimization</title> 
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -116,14 +118,21 @@
       </div>
       <p>
         For persistent contrails, the atmosphere must also be ice-supersaturated – a condition that occurs with a 30–50% probability in the Northern Hemisphere.
+          <a href="https://www.sesarju.eu/sites/default/files/documents/sid/2024/papers/SIDs_2024_paper_017%20final.pdf" target="_blank"> (Rosenow & Köhler, 2024)
+          </a>.
       </p>
+      <div class="image-box">
+        <img src="theta_2.png" alt="Sun position and radiation" />
+        <figcaption>Fig. 6: Probability of upwind speeds 10^{−4} ≤ v_z ≤ 10^{−2} m/s summarized over three days per month in 2023 (36 days in total) and over three pressure
+level (200, 250 and 300 hPa)..</figcaption>
+      </div>
     </section>
 
     <section>
       <h2>How Long Do Contrails Last?</h2>
       <p>
         The lifetime depends on the thickness of the ice-supersaturated layer and prevailing wind conditions. 
-        Due to wind shear and mixing with the environment, contrails spread and can persist for several hours.
+        Due to wind shear and mixing with the environment, contrails spread and can persist for several hours. 
       </p>
       <div class="image-box">
         <img src="Winddrift.png" alt="Wind drift of contrails" />
@@ -144,10 +153,6 @@
       <div class="image-box">
         <img src="Strahlungsbilanz.png" alt="Radiation balance of contrails" />
         <figcaption>Fig. 5: Radiation balance as a function of sun position and land use class.</figcaption>
-      </div>
-      <div class="image-box">
-        <img src="theta_2.png" alt="Sun position and radiation" />
-        <figcaption>Fig. 6: Cooling effect is strongest during sunrise and sunset.</figcaption>
       </div>
     </section>
 
