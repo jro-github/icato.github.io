@@ -103,8 +103,9 @@
         </div>
       </section>
       <p>
-        Contrails form behind aircraft in cold, ice-supersaturated atmospheres. 
-        They are line-shaped cirrus clouds that can both cool and warm the Earth-atmosphere system, depending on their lifetime, microphysical properties, and time and location of formation.
+        Contrails are ice clouds formed behind aircraft in a cold and ice-supersaturated atmosphere.
+Line-shaped cirrus clouds, which have even been included in the Cloud Atlas by the World Meteorological Society as ‘Cirrus homogenitus’, can cool and warm the Earth-atmosphere radiation system. 
+      The dominant effect depends strongly on the lifetime and the microphysical properties of the contrail, as well as on the place and time of formation. In the ICATO project, these conditions are being investigated in detail and the resulting findings are implemented in the TOMATO simulation environment for trajectory optimization.
       </p>
       <p>
         In the ICATO project, these conditions are investigated in detail and the findings are prepared for the integration into a simulation environment for aircraft trajectory optimization.
@@ -114,54 +115,89 @@
     <section>
       <h2>When Do Contrails Form?</h2>
       <p>
-        Contrails form due to condensation of water vapor on hydrophilic emissions (e.g., soot particles, natural condensation nuclei) from aircraft engines. 
-        For condensation to occur, the atmosphere must be very cold. The critical temperature T<sub>LM</sub> is determined by the <strong>Schmidt-Appleman Criterion</strong>.
+        Contrails are formed by condensation of atmospheric water vapor on hydrophilic emissions (e.g. soot particles) from the engines. To ensure that the emitted (engine) heat does not prevent condensation, the atmosphere must be very cold. The critical temperature TLM can be calculated using the <strong>Schmidt-Appleman Criterion</strong>: If the straight mixing line intersects the curve of saturation vapor pressure e*, contrails are formed.
       </p>
       <div class="image-box">
         <img src="Schmidt-Appleman.png" alt="Schmidt-Appleman Criterion" />
         <figcaption>Fig. 1: Schmidt-Appleman criterion – If the mixing line intersects the saturation curve, contrails form.</figcaption>
       </div>
+      This temperature criterion depends on the relative humidity U in the atmosphere and is also fulfilled in dry air from a cruising altitude of 10 km.
       <div class="image-box">
         <img src="Schmidt-Appleman2.png" alt="Schmidt-Appleman Criterion (2)" />
         <figcaption>Fig. 2: Practical application – Contrail formation is possible at cruise altitudes above 10 km.</figcaption>
       </div>
       <p>
-        For persistent contrails, the atmosphere must also be ice-supersaturated – a condition that occurs with a 30–50% probability in the Northern Hemisphere.
+        For contrails to develop into long-lasting cirrus clouds, the atmosphere must also be supersaturated with respect to ice. This happens in the atmosphere near the tropopause when there is sufficient water vapor available for natural cloud formation, but no natural condensation nuclei (e.g. salt crystals from seawater, desert sand or flower pollen). Our data analyses from modelled weather data in 2023 have shown a probability of ice supersaturation of 30 % to 50 % in the northern hemisphere.
           <a href="https://www.sesarju.eu/sites/default/files/documents/sid/2024/papers/SIDs_2024_paper_017%20final.pdf" target="_blank"> (Rosenow & Köhler, 2024)
           </a>.
       </p>
-      <div class="image-box">
-        <img src="theta_2.png" alt="Sun position and radiation" class="large-image" class="large-image"/>
-        <figcaption>Fig. 6: Probability of upwind speeds 10^{−4} ≤ v_z ≤ 10^{−2} m/s summarized over three days per month in 2023 (36 days in total) and over three pressure
-level (200, 250 and 300 hPa)..</figcaption>
-      </div>
+      
     </section>
 
     <section>
       <h2>How Long Do Contrails Last?</h2>
       <p>
-        The lifetime depends on the thickness of the ice-supersaturated layer and prevailing wind conditions. 
-        Due to wind shear and mixing with the environment, contrails spread and can persist for several hours. 
+ In order to estimate the optical properties of contrails, both their microphysical properties and their lifetime must be determined. 
+  Our lifetime model calculates the mixing of the contrail with the atmosphere using a sheared Gaussian plume model 
+  <a href="https://doi.org/10.3390/su15118669" target="_blank">(Rosenow & Fricke, 2023)</a>.
+  The model has been validated in Central Europe and is publicly available in the <a href="https://github.com/jro-github/intersected_contrails" target="_blank">GitHub repository</a> <em>intersected_contrails</em>.
+      </p>
+      The ice particle shapes depend on the temperature and the ice particle size increases as it grows into the ice-saturated air. The initial number of ice crystals is determined by the number of soot particles emitted. Subsequently, the crystals can fragment or clump together.
+      <div class="image-box">
+        <img src="ParticleShapes.png" alt="Ice particle shapes in contrails" />
+        <figcaption>Fig. 3: Typical ice particle shapes in contrails.</figcaption>
+      </div>
+      <p>
+      During its lifetime, the contrail is pushed in all directions by the wind. If it is not lifted upwards by the wind, the contrail falls downwards due to gravity. If the contrail leaves the ice-saturated layer or the ice water content falls below a critical value, the life of the contrail is over  
       </p>
       <div class="image-box">
         <img src="Winddrift.png" alt="Wind drift of contrails" />
         <figcaption>Fig. 3: Wind drift affects the spread and lifetime of contrails.</figcaption>
       </div>
+      <p>
+      This means that the lifespan is largely dependent on the size of the ice-saturated layer and the prevailing winds. Under typical vertical wind conditions, contrails live for several hours even in thin ice-saturated layers2.
+      </p>
       <div class="image-box">
         <img src="Lifetime.png" alt="Contrail lifetime" />
-        <figcaption>Fig. 4: Lifetime in dependence on environmental conditions.</figcaption>
+        <figcaption>Fig. 4: Contrail lifetime depending on environmental conditions.</figcaption>
+      </div>
+      <p>
+       Figure XXXX quantifies the probability of the identified small upwind speeds $10^{−4}$ ≤ v_z ≤ $10^{−2}$ m/s as a function of latitude between 12% and 35% in April 2023. Thereby, an impact of the longitude could not be identified.
+      </p>
+      <div class="image-box">
+        <img src="theta_2.png" alt="Sun position and radiation" class="large-image"/>
+        <figcaption>Fig. 5: Probability of upwind speeds $10^{−4$} ≤ v_z ≤ $10^{−2}$ m/s summarized over three days per month in 2023 (36 days in total) and over three pressure
+level (200, 250 and 300 hPa)..</figcaption>
       </div>
     </section>
 
     <section>
       <h2>What Is the Impact on the Radiation Budget?</h2>
       <p>
-        Contrails scatter incoming solar radiation (cooling effect) and absorb outgoing longwave radiation (warming effect). 
-        The dominant effect depends on the solar zenith angle, time of day, and ice crystal properties.
+Contrails act like a barrier in the Earth-atmosphere radiation balance. 
+  They scatter parts of the solar radiation back into the atmosphere (cooling effect). 
+  They also absorb and re-emit terrestrial radiation back to the Earth's surface (warming effect). 
+  The dominant effect can be determined using a Monte Carlo simulation 
+  <a href="https://doi.org/10.3390/su11216082" target="_blank">(Rosenow & Fricke, 2019)</a>.
+  The model and code are publicly available in the <a href="https://github.com/jro-github/rf-contrails" target="_blank">GitHub repository</a> <em>rf-contrails</em>.
       </p>
       <div class="image-box">
         <img src="Strahlungsbilanz.png" alt="Radiation balance of contrails" />
-        <figcaption>Fig. 5: Radiation balance as a function of sun position and land use class.</figcaption>
+        <figcaption>Fig. 6: Radiation balance as a function of sun position and land use class.</figcaption>
+      </div>
+      <p>
+      Due to the strong forward scattering, the optical properties depend not only on the size and number density of the ice crystals, but above all on the solar zenith angle and the intensity of the incoming radiation. The figure shows the radiation balance of contrails [W/(m$^2$)] as a function of the position of the sun and the land use class. A cooling effect is therefore only likely at large solar zenith angles, e.g. during sunrise and sunset.
+      </p>
+      <div class="image-box">
+        <img src="Results_P_net.png" alt="Radiation balance of contrails" />
+        <figcaption>Fig. 6: Net radiative effect [mW/(m$^2$ nm)] vs. solar zenith angle and surface type. Red contours indicate maximum warming (e.g., over snow); light blue values show net cooling at large solar zenith angles (70° ≤ θ ≤ 80°) for most surfaces.</figcaption>
+      </div>
+      <p>
+        This angle varies in duration depending on the time of year and location. In the mid-latitudes between spring and fall, large angles occur for one to two hours during sunrise and sunset. In winter, large angles occur around midday for five consecutive hours.
+      </p>
+      <div class="image-box">
+        <img src="ISS_Heatmap.png" alt="Theta as function of time and location" />
+        <figcaption>Fig. 6: Net radiative effect [mW/(m$^2$ nm)] vs. solar zenith angle and surface type. Red contours indicate maximum warming (e.g., over snow); light blue values show net cooling at large solar zenith angles (70° ≤ θ ≤ 80°) for most surfaces.</figcaption>
       </div>
     </section>
 
