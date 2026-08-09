@@ -39,35 +39,52 @@
       border-bottom: 1px solid #eee;
       padding-bottom: 5px;
     }
-    .image-box {
-      flex: 1 1 45%;
-      text-align: center;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      background: #fff;
-      padding: 10px;
-    }
-    .image-box img {
-      max-width: 300px;
-      height: auto;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .image-box figcaption {
-      font-size: 0.9em;
-      color: #666;
-      margin-top: 8px;
-    }
-    .large-image {
-      width: 100%;
-      max-width: 500px; /* ← Hier legst du die maximale Breite fest */
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      display: block;
-      margin: 20px auto; /* Zentriert die Abbildung */
-    }
+.image-box {
+  flex: 1 1 45%;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: #fff;
+  padding: 10px;
+  /* Sicherstellen, dass der Container breit genug ist */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-box img,
+.image-box .large-image {
+  max-width: 300px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: block;
+  margin: 0 auto; /* Zentriert das Bild innerhalb des Containers */
+}
+
+/* Beschriftung soll die volle Breite des .image-box nutzen */
+.image-box figcaption {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 8px;
+  text-align: center;
+  width: 100%; /* Wichtig: macht die Beschriftung breit */
+  display: block;
+  padding: 0 10px; /* Optional: etwas Abstand von den Rändern */
+  box-sizing: border-box; /* Damit padding nicht die Breite verändert */
+}
+
+/* Optional: Wenn du die große Abbildung anders formatieren willst */
+.large-image {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: block;
+  margin: 20px auto;
+}
     ul {
       padding-left: 20px;
     }
