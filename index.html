@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   	<title>ICATO – Individual Condensation Trails in Aircraft Trajectory Optimization</title> 
+  <!-- MathJax laden -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <style>
@@ -104,7 +105,7 @@
       </section>
       <p>
         Contrails are ice clouds formed behind aircraft in a cold and ice-supersaturated atmosphere.
-Line-shaped cirrus clouds, which have even been included in the Cloud Atlas by the World Meteorological Society as ‘Cirrus homogenitus’, can cool and warm the Earth-atmosphere radiation system. 
+Line-shaped cirrus clouds, which have even been included in the Cloud Atlas by the World Meteorological Society as <strong>Cirrus homogenitus</strong>, can cool and warm the Earth-atmosphere radiation system. 
       The dominant effect depends strongly on the lifetime and the microphysical properties of the contrail, as well as on the place and time of formation. In the ICATO project, these conditions are being investigated in detail and the resulting findings are implemented in the TOMATO simulation environment for trajectory optimization.
       </p>
       <p>
@@ -127,7 +128,7 @@ Line-shaped cirrus clouds, which have even been included in the Cloud Atlas by t
         <figcaption>Fig. 2: Practical application – Contrail formation is possible at cruise altitudes above 10 km.</figcaption>
       </div>
       <p>
-        For contrails to develop into long-lasting cirrus clouds, the atmosphere must also be supersaturated with respect to ice. This happens in the atmosphere near the tropopause when there is sufficient water vapor available for natural cloud formation, but no natural condensation nuclei (e.g. salt crystals from seawater, desert sand or flower pollen). Our data analyses from modelled weather data in 2023 have shown a probability of ice supersaturation of 30 % to 50 % in the northern hemisphere.
+        For contrails to develop into long-lasting cirrus clouds, the atmosphere must also be supersaturated with respect to ice. This happens in the atmosphere near the tropopause when there is sufficient water vapor available for natural cloud formation, but no natural condensation nuclei (e.g. salt crystals from seawater, desert sand or flower pollen). Our data analyses from modelled weather data in 2023 have shown a probability of ice supersaturation of 30 % to 50 % in the northern hemisphere
           <a href="https://www.sesarju.eu/sites/default/files/documents/sid/2024/papers/SIDs_2024_paper_017%20final.pdf" target="_blank"> (Rosenow & Köhler, 2024)
           </a>.
       </p>
@@ -155,18 +156,18 @@ Line-shaped cirrus clouds, which have even been included in the Cloud Atlas by t
         <figcaption>Fig. 3: Wind drift affects the spread and lifetime of contrails.</figcaption>
       </div>
       <p>
-      This means that the lifespan is largely dependent on the size of the ice-saturated layer and the prevailing winds. Under typical vertical wind conditions, contrails live for several hours even in thin ice-saturated layers2.
+      This means that the lifespan is largely dependent on the size of the ice-saturated layer and the prevailing winds. Under typical vertical wind conditions, contrails live for several hours even in thin ice-saturated layers.
       </p>
       <div class="image-box">
         <img src="Lifetime.png" alt="Contrail lifetime" />
         <figcaption>Fig. 4: Contrail lifetime depending on environmental conditions.</figcaption>
       </div>
       <p>
-       Figure XXXX quantifies the probability of the identified small upwind speeds $10^{−4}$ ≤ v_z ≤ $10^{−2}$ m/s as a function of latitude between 12% and 35% in April 2023. Thereby, an impact of the longitude could not be identified.
+       Figure XXXX quantifies the probability of the identified small upwind speeds 10<sup>-4</sup> ≤ v<sub>z</sub> ≤ 10<sup>-2</sup> m/s as a function of latitude between 12% and 35% in April 2023. Thereby, an impact of the longitude could not be identified.
       </p>
       <div class="image-box">
         <img src="theta_2.png" alt="Sun position and radiation" class="large-image"/>
-        <figcaption>Fig. 5: Probability of upwind speeds $10^{−4$} ≤ v_z ≤ $10^{−2}$ m/s summarized over three days per month in 2023 (36 days in total) and over three pressure
+        <figcaption>Fig. 5: Probability of upwind speeds 10<sup>-4</sup> ≤ v<sub>z</sub> ≤ 10<sup>-2</sup> m/s summarized over three days per month in 2023 (36 days in total) and over three pressure
 level (200, 250 and 300 hPa)..</figcaption>
       </div>
     </section>
@@ -186,23 +187,23 @@ Contrails act like a barrier in the Earth-atmosphere radiation balance.
         <figcaption>Fig. 6: Radiation balance as a function of sun position and land use class.</figcaption>
       </div>
       <p>
-      Due to the strong forward scattering, the optical properties depend not only on the size and number density of the ice crystals, but above all on the solar zenith angle and the intensity of the incoming radiation. The figure shows the radiation balance of contrails [W/(m$^2$)] as a function of the position of the sun and the land use class. A cooling effect is therefore only likely at large solar zenith angles, e.g. during sunrise and sunset.
+      Due to the strong forward scattering, the optical properties depend not only on the size and number density of the ice crystals, but above all on the solar zenith angle and the intensity of the incoming radiation. The figure shows the radiation balance of contrails [W/(m$$^2$$)] as a function of the position of the sun and the land use class. A cooling effect is therefore only likely at large solar zenith angles, e.g. during sunrise and sunset.
       </p>
       <div class="image-box">
         <img src="Results_P_net.png" alt="Radiation balance of contrails" />
-        <figcaption>Fig. 6: Net radiative effect [mW/(m$^2$ nm)] vs. solar zenith angle and surface type. Red contours indicate maximum warming (e.g., over snow); light blue values show net cooling at large solar zenith angles (70° ≤ θ ≤ 80°) for most surfaces.</figcaption>
+        <figcaption>Fig. 6: Net radiative effect [mW/(m<sup>2</sup> nm)] vs. solar zenith angle and surface type. Red contours indicate maximum warming (e.g., over snow); light blue values show net cooling at large solar zenith angles (70° ≤ θ ≤ 80°) for most surfaces.</figcaption>
       </div>
       <p>
         This angle varies in duration depending on the time of year and location. In the mid-latitudes between spring and fall, large angles occur for one to two hours during sunrise and sunset. In winter, large angles occur around midday for five consecutive hours.
       </p>
       <div class="image-box">
         <img src="ISS_Heatmap.png" alt="Theta as function of time and location" />
-        <figcaption>Fig. 6: Net radiative effect [mW/(m$^2$ nm)] vs. solar zenith angle and surface type. Red contours indicate maximum warming (e.g., over snow); light blue values show net cooling at large solar zenith angles (70° ≤ θ ≤ 80°) for most surfaces.</figcaption>
+        <figcaption>Fig. 6: Net radiative effect [mW/(m<sup>2</sup> nm)] vs. solar zenith angle and surface type. Red contours indicate maximum warming (e.g., over snow); light blue values show net cooling at large solar zenith angles (70° ≤ θ ≤ 80°) for most surfaces.</figcaption>
       </div>
     </section>
 
     <section>
-      <h2>Publications</h2>
+      <h2>References</h2>
       <ul>
         <li>
           Judith Rosenow and Sophie Köhler (2024): 
@@ -221,16 +222,13 @@ Contrails act like a barrier in the Earth-atmosphere radiation balance.
     <section>
       <h2>Projects</h2>
       <p>
-        The results of the ICATO project are integrated into the TOMATO simulation environment to optimize sustainable flight trajectories.
-      </p>
-      <p>
-        <strong>Project Link:</strong> <a href="https://github.com/DeinGitHubName/tomato-simulation">GitHub: TOMATO Simulation</a>
+        The results of the ICATO project are prepared for the integration into an aircraft trajectory simulation environment to optimize sustainable flight trajectories.
       </p>
     </section>
 
     <footer>
-      &copy; 2025 ICATO. All rights reserved.<br>
-      Contact: <a href="mailto:Judith.Rosenow@dlr.de">deine.email@uni.de</a>
+      &copy; 2026 ICATO. All rights reserved.<br>
+      Contact: <a href="mailto:Judith.Rosenow@dlr.de">Judith.Rosenow@dlr.de</a>
     </footer>
   </div>
 </body>
