@@ -69,13 +69,13 @@
   color: #666;
   margin-top: 8px;
   text-align: center;
-  width: 100%; /* Wichtig: macht die Beschriftung breit */
+  width: 100%; /* macht die Beschriftung breit */
   display: block;
   padding: 0 10px; /* Optional: etwas Abstand von den Rändern */
   box-sizing: border-box; /* Damit padding nicht die Breite verändert */
 }
 
-/* Optional: Wenn du die große Abbildung anders formatieren willst */
+/* Optional: Wenn die große Abbildung anders formatiert sein soll */
 .large-image {
   width: 100%;
   max-width: 700px;
@@ -139,10 +139,24 @@ Line-shaped cirrus clouds, which have even been included in the Cloud Atlas by t
         <img src="Schmidt-Appleman.png" alt="Schmidt-Appleman Criterion" />
         <figcaption>Fig. 1: Schmidt-Appleman criterion – If the mixing line intersects the saturation curve, contrails form.</figcaption>
       </div>
-      This temperature criterion depends on the relative humidity U in the atmosphere and is also fulfilled in dry air from a cruising altitude of 10 km.
+      This temperature criterion (T$_{LM$}) depends on the relative humidity U in the atmosphere and is also fulfilled in dry air from a cruising altitude of 10 km.
       <div class="image-box">
         <img src="Schmidt-Appleman2.png" alt="Schmidt-Appleman Criterion (2)" />
         <figcaption>Fig. 2: Practical application – Contrail formation is possible at cruise altitudes above 10 km.</figcaption>
+      </div>
+      <p>
+       Another study examined how future aircraft concepts, such aus fuel cell stack configurations and atmospheric conditions (covered by standard atmospheres) affect contrail formation potential in hydrogen-electric aircraft, 
+        using a modified ATR 72 with a cryogenic hydrogen fuel cell system. The minimum contrail formation temperature T$_{LM$} was primarily influenced by ambient pressure and temperature, 
+        with atmospheric conditions dominating over propulsion-specific factors like fuel cell efficiency or exhaust temperature. 
+        While higher system efficiency slightly increased T$_{LM$}, the subarctic winter atmosphere posed the highest contrail risk, highlighting the critical role of environment. 
+        Results suggest that optimizing fuel cell systems for efficiency does not inherently increase contrail risk <a href="https://ieeexplore.ieee.org/document/11524171"> (Rosenow and Geyer 2026)</a>. 
+      </p> 
+      <div class="image-box">
+        <img src="eta_TLM.eps" alt="Schmidt-Appleman Criterion (2)" />
+        <figcaption>Fig. 2: Mean values of the minimum contrail formation temperature T$_{LM$}
+and overall efficiency η as functions of the number of fuel cells N across
+ modeled standard atmospheres. The results indicate a positive correlation between
+both parameters, though atmospheric variability is not resolved.</figcaption>
       </div>
       <p>
         For contrails to develop into long-lasting cirrus clouds, the atmosphere must also be supersaturated with respect to ice. 
@@ -251,6 +265,7 @@ Contrails act like a barrier in the Earth-atmosphere radiation balance.
           <a href="https://doi.org/10.61009/SID.2024.1.09" target="_blank">DOI: 10.61009/SID.2024.1.09</a>
         </li>
         <li>Judith Rosenow and Mingchuan Luo (2026): <a href="https://doi.org/10.3390/aerospace13020164">A Contrail Life Cycle Model with Interaction of Overlapping Contrails</a>, Aerospace, 13(2), 164. </li>
+      <li>Judith Rosenow and Thomas Fritz Geyer (2026): <a href="https://ieeexplore.ieee.org/document/11524171">Impact of Fuel-Cell Stack Size and Atmospheric Conditions on Contrail Formation</a>, <em>New Trends in Civil Aviation (NTCA)</em>, Prague, Czech Republic</li>
       </ul>
       /section>
 
